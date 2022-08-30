@@ -9,6 +9,7 @@
 namespace Cmsgarden\Cmsscanner\Command;
 
 use Cmsgarden\Cmsscanner\Detector\System;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
@@ -155,6 +156,8 @@ class DetectCommand extends AbstractDetectionCommand
         }
 
         $this->outputProfile($startTime, $output);
+
+        return Command::SUCCESS;
     }
 
     /**

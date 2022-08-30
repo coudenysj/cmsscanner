@@ -47,5 +47,7 @@ class UpdateCommand extends Command
     {
         $manager = new Manager(Manifest::loadFile(self::MANIFEST_FILE));
         $manager->update($this->getApplication()->getVersion(), true);
+
+        return Command::SUCCESS;
     }
 }
