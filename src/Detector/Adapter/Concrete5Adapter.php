@@ -20,6 +20,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class Concrete5Adapter implements AdapterInterface
 {
+    const NAME = 'Concrete5';
+
     /**
      * Version detection information for Contao
      * @var array
@@ -120,6 +122,6 @@ class Concrete5Adapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Concrete5';
+        return self::NAME;
     }
 }

@@ -20,6 +20,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class AdminerAdapter implements AdapterInterface
 {
+    const NAME = 'Adminer';
+
     /**
      * Adminer has changed the way how the version number is stored multiple times, so we need this comprehensive array
      * @var array
@@ -56,7 +58,7 @@ class AdminerAdapter implements AdapterInterface
         if ($file->getFilename() != "adm.php") {
             return false;
         }
-        if (stripos($file->getContents(), 'Adminer') === false) {
+        if (stripos($file->getContents(), self::NAME) === false) {
             return false;
         }
 
@@ -109,6 +111,6 @@ class AdminerAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Adminer';
+        return self::NAME;
     }
 }

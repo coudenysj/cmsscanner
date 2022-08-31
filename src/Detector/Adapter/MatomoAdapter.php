@@ -20,6 +20,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class MatomoAdapter implements AdapterInterface
 {
+    const NAME = 'Matomo';
+
     /**
      * Matomo has changed the way how the version number is stored multiple times, so we need this comprehensive array
      * @var array
@@ -114,6 +116,6 @@ class MatomoAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Matomo';
+        return self::NAME;
     }
 }

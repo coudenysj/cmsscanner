@@ -20,6 +20,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class PhpMyAdminAdapter implements AdapterInterface
 {
+    const NAME = 'phpMyAdmin';
+
     /**
      * phpMyAdmin has changed the way how the version number is
      * stored multiple times, so we need this comprehensive array
@@ -115,6 +117,6 @@ class PhpMyAdminAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'phpMyAdmin';
+        return self::NAME;
     }
 }

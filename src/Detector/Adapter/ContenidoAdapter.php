@@ -14,6 +14,7 @@ use Symfony\Component\Finder\SplFileInfo;
 
 class ContenidoAdapter implements AdapterInterface
 {
+    const NAME = 'Contenido';
 
     private $versions = array(
         array(
@@ -177,6 +178,6 @@ class ContenidoAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Contenido';
+        return self::NAME;
     }
 }

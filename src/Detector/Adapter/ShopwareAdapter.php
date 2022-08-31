@@ -20,6 +20,7 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class ShopwareAdapter implements AdapterInterface
 {
+    const NAME = 'Shopware';
 
     /**
      * Version detection information for Shopware
@@ -61,7 +62,7 @@ class ShopwareAdapter implements AdapterInterface
         if (stripos($file->getContents(), 'class Shopware extends Enlight_Application') === false) {
             return false;
         }
-        if (basename($file->getPath()) === 'Shopware') {
+        if (basename($file->getPath()) === self::NAME) {
             // Shopware 2.x
             $path = new \SplFileInfo($file->getPathInfo()->getPathInfo()->getPath());
         }
@@ -111,6 +112,6 @@ class ShopwareAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Shopware';
+        return self::NAME;
     }
 }

@@ -22,6 +22,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class ContaoAdapter implements AdapterInterface
 {
+    const NAME = 'Contao';
+
     /**
      * Possible files to detect a Contao version
      * @var array
@@ -86,7 +88,7 @@ class ContaoAdapter implements AdapterInterface
             return false;
         }
 
-        if (stripos($file->getContents(), 'Contao') === false) {
+        if (stripos($file->getContents(), self::NAME) === false) {
             return false;
         }
 
@@ -163,7 +165,7 @@ class ContaoAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Contao';
+        return self::NAME;
     }
 
     /**

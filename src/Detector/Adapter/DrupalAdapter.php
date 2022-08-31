@@ -21,6 +21,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class DrupalAdapter implements AdapterInterface
 {
+    const NAME = 'Drupal';
+
     /**
      * Drupal has changed the way how the version number is stored multiple times, so we need this comprehensive array
      * @var array
@@ -273,6 +275,6 @@ class DrupalAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Drupal';
+        return self::NAME;
     }
 }

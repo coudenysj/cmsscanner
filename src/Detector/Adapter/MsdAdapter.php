@@ -20,6 +20,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class MsdAdapter implements AdapterInterface
 {
+    const NAME = 'MySQLDumper';
+
     /**
      * Msd has changed the way how the version number is stored multiple times, so we need this comprehensive array
      * @var array
@@ -115,6 +117,6 @@ class MsdAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'MySQLDumper';
+        return self::NAME;
     }
 }

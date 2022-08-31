@@ -22,6 +22,7 @@ use Cmsgarden\Cmsscanner\Detector\Module;
  */
 class Typo3CmsAdapter implements AdapterInterface
 {
+    const NAME = 'TYPO3 CMS';
 
     /**
      * Version detection information for TYPO3 CMS 4.x and 6.x
@@ -154,6 +155,6 @@ class Typo3CmsAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'TYPO3 CMS';
+        return self::NAME;
     }
 }

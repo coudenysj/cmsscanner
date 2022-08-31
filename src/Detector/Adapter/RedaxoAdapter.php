@@ -20,6 +20,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class RedaxoAdapter implements AdapterInterface
 {
+    const NAME = 'Redaxo';
+
     /**
      * $REX['VERSION'] = "4";
      * $REX['SUBVERSION'] = "1";
@@ -112,6 +114,6 @@ class RedaxoAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Redaxo';
+        return self::NAME;
     }
 }

@@ -20,6 +20,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class MagentoAdapter implements AdapterInterface
 {
+    const NAME = 'Magento';
+
     /**
      * Magento has changed the way how the version number is stored multiple times, so we need this comprehensive array
      * @var array
@@ -114,6 +116,6 @@ class MagentoAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Magento';
+        return self::NAME;
     }
 }

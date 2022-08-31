@@ -20,6 +20,7 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class NextcloudAdapter implements AdapterInterface
 {
+    const NAME = 'Nextcloud';
 
     /**
      * Version detection information for Nextcloud
@@ -108,6 +109,6 @@ class NextcloudAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Nextcloud';
+        return self::NAME;
     }
 }

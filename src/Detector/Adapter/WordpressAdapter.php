@@ -21,6 +21,8 @@ use Cmsgarden\Cmsscanner\Detector\Module;
  */
 class WordpressAdapter implements AdapterInterface
 {
+    const NAME = 'WordPress';
+
     /**
      * The path of the plugins.
      * @var string
@@ -163,6 +165,6 @@ class WordpressAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'WordPress';
+        return self::NAME;
     }
 }

@@ -20,6 +20,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class PivotxAdapter implements AdapterInterface
 {
+    const NAME = 'PivotX';
+
     /**
      * look for the lib.php with a version string in it
      *
@@ -94,6 +96,6 @@ class PivotxAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'PivotX';
+        return self::NAME;
     }
 }

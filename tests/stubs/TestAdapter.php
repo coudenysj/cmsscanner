@@ -16,6 +16,8 @@ use Cmsgarden\Cmsscanner\Detector\Adapter\AdapterInterface;
 class TestAdapter implements AdapterInterface
 {
 
+    const NAME = 'Test';
+
     public function appendDetectionCriteria(Finder $finder)
     {
         return $finder;
@@ -38,6 +40,6 @@ class TestAdapter implements AdapterInterface
 
     public function getName()
     {
-        return 'Test';
+        return self::NAME;
     }
 }

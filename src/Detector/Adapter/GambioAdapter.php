@@ -20,6 +20,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class GambioAdapter implements AdapterInterface
 {
+    const NAME = 'Gambio';
+
     /**
      * Gambio has changed the way how the version number is stored multiple times, so we need this comprehensive array
      * @var array
@@ -56,7 +58,7 @@ class GambioAdapter implements AdapterInterface
         if ($file->getFilename() != "release_info.php") {
             return false;
         }
-        if (stripos($file->getContents(), 'Gambio') === false) {
+        if (stripos($file->getContents(), self::NAME) === false) {
             return false;
         }
         $path = new \SplFileInfo($file->getPath());
@@ -111,6 +113,6 @@ class GambioAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Gambio';
+        return self::NAME;
     }
 }

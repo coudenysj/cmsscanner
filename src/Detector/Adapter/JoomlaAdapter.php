@@ -21,6 +21,8 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class JoomlaAdapter implements AdapterInterface
 {
+    const NAME = 'Joomla';
+
     /**
      * Joomla has changed the way how the version number is stored multiple times, so we need this comprehensive array
      * @var array
@@ -585,6 +587,6 @@ class JoomlaAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Joomla';
+        return self::NAME;
     }
 }

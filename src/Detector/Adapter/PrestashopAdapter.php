@@ -20,6 +20,7 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class PrestashopAdapter implements AdapterInterface
 {
+    const NAME = 'Prestashop';
 
     /**
      * Version detection information for Prestashop
@@ -115,6 +116,6 @@ class PrestashopAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Prestashop';
+        return self::NAME;
     }
 }

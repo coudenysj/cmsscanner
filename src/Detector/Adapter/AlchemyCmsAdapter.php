@@ -21,6 +21,7 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class AlchemyCmsAdapter implements AdapterInterface
 {
+    const NAME = 'Alchemy CMS';
 
     # The Gemfile.lock includes the fixed version number of Alchemy CMS
     # the host application is curently using.
@@ -101,6 +102,6 @@ class AlchemyCmsAdapter implements AdapterInterface
      */
     public function getName()
     {
-        return 'Alchemy CMS';
+        return self::NAME;
     }
 }
