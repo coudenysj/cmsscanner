@@ -79,7 +79,7 @@ class DetectCommand extends AbstractDetectionCommand
      *
      * @return  int|null|void
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $startTime = microtime(true);
 
