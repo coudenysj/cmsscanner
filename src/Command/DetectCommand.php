@@ -28,7 +28,7 @@ class DetectCommand extends AbstractDetectionCommand
     /**
      * configure this console command
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName('cmsscanner:detect')
